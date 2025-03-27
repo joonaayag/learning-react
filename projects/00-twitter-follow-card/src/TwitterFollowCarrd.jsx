@@ -7,7 +7,7 @@ export function TwitterFollowCarrd ({formatUserName, userName = 'Unknown', name 
     // ==
     const [isFollowing, setisFollowing] = useState(initialIsFollowing);
 
-    const text = isFollowing ? 'Siguiendo' : 'Seguir'
+    const text = isFollowing ? 'Following' : 'Follow'
     const buttonClassName = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button'
     const srcImage = `https://unavatar.io/${userName}`
 
@@ -27,7 +27,7 @@ export function TwitterFollowCarrd ({formatUserName, userName = 'Unknown', name 
             <aside>
                 <button onClick={handleClick} className={buttonClassName}>
                     <span className="tw-followCard-text">{text}</span>
-                <span className="tw-followCard-stopFollow">Dejar de seguir</span>
+                <span className="tw-followCard-stopFollow">Stop following</span>
                 </button>
             </aside>
         </article>
